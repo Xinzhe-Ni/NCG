@@ -12,12 +12,13 @@ CompNCG<-
     match(commonEID.v,rownames(exp)) -> map3.idx;
     expint <- exp[map3.idx,];
     
-    ECCGO<-ECCint*kmint
-    NC<- vector()
-    for(i in 1:ncol(ECCGO)){
-      NC[i]<-sum(ECCGO[i,])}
-    NCG<-as.vector(t(expint)%*%NC)
-    NCG_nor<-NCG/max(NCG)
+    EG <- ECCint*kmint;
+    NC <- vector();
+    for(i in 1:ncol(EG)){
+      ECG[i]<-sum(EG[i,]);
+    }
+    NCG <- as.vector(t(expint)%*%ECG);
+    NCG_nor <- NCG/max(NCG);  #normalization
     
-    return(NCG_nor)
+    return(NCG_nor);
   }
