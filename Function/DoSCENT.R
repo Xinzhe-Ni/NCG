@@ -120,6 +120,7 @@ function(exp.m,sr.v,pheno.v=NULL,mixmod=NULL,maxPS=5,pctG=0.01,kmax=9,pctLM=0.05
        medLM.m <- med.m[,ldmkCL.idx];
        colnames(medLM.m) <- namePSCL.v[ldmkCL.idx];
        rownames(medLM.m) <- selGcl.v;
+       
        ### now project each cell onto two nearest landmarks
        print("Inferring dependencies/trajectories/transitions between landmarks");
        cellLM2.v <- vector(); cellLM.v <- vector();

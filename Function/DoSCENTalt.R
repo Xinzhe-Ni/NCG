@@ -119,6 +119,7 @@ DoSCENT <-
     medLM.m <- med.m[,ldmkCL.idx];
     colnames(medLM.m) <- namePSCL.v[ldmkCL.idx];
     rownames(medLM.m) <- selGcl.v;
+    
     ### now project each cell onto two nearest landmarks
     print("Inferring dependencies/trajectories/transitions between landmarks");
     cellLM2.v <- vector(); cellLM.v <- vector();
