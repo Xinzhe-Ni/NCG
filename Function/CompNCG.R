@@ -15,7 +15,7 @@ CompNCG<-
     EG <- ECCint*kmint;
     NC <- vector();
     for(i in 1:ncol(EG)){
-      ECG[i]<-sum(EG[i,]);
+      ECG[i] <- sum(EG[i,]);
     }
     NCG <- as.vector(t(expint)%*%ECG);
     NCG_nor <- NCG/max(NCG);  #normalization

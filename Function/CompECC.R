@@ -5,7 +5,7 @@ CompECC <-
     for(i in 1:ncol(PPI)){
       N[i] <- sum(PPI[i,]);
     }
-    ECC <- matrix(0,nrow=nrow(PPI),ncol = ncol(PPI));
+    ECC <- matrix(0,nrow=nrow(PPI),ncol=ncol(PPI));
     Conode <- PPI%*%PPI;
     for(i in 1:nrow(PPI)){
       for(j in 1:nrow(PPI)){
