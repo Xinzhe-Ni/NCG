@@ -11,7 +11,8 @@ match(commonEID.v,rownames(ppiA.m)) -> map2.idx;
 adj.m <- ppiA.m[map2.idx,map2.idx];
 
 gr.o <- graph.adjacency(adj.m,mode="undirected");
-comp.l <- clusters(gr.o)v <- summary(factor(comp.l$member));
+comp.l <- clusters(gr.o);
+cd.v <- summary(factor(comp.l$member));
 mcID <- as.numeric(names(cd.v)[which.max(cd.v)]);
 maxc.idx <- which(comp.l$member==mcID);
 adjMC.m <- adj.m[maxc.idx,maxc.idx];
