@@ -9,33 +9,19 @@ geneIDselect <- mapIds(org.Hs.eg.db,keys=r,column="SYMBOL",keytype="ENSEMBL",mul
 rownames(data$exp) <- geneIDselect;
 data$exp <- data$exp[!is.na(rownames(data$exp)),];
 
-##Calculation of SR
-source('CompMaxSR.R');
-source('CompNS.R');
-source('CompS.R');
-source('CompSRana.R');
-source('DoIntegPPI.R');
-source('DoSCENT.R');
-int.o <- DoIntegPPI(data$exp,data$adj);
-maxSR <- CompMaxSR(int.o$adjMC);
-SR.v <- vector(); 
-for(s in 1:ncol(data$exp)){
-  SR.v[s] <- CompSRana(int.o$expMC[,s],int.o$adjMC,maxSR=maxSR)$sr;
-}
-
 ##Calculation of NCG
+source('DoIntegPPI.R');
 source('CompECC.R');
 source('CompNCG.R');
 load("hs_km.Rda");
+int.o <- DoIntegPPI(data$exp,data$adj);
 ECC <- CompECC(int.o$adjMC);
 NCG <- CompNCG(ECC,int.o$expMC,km);
 
 ##Construction of lineage trajectory
-source('DoSCENT.R');
 source('DoSCENTalt.R');
 pheno.v <- c(rep(1,96),rep(2,96),rep(3,96),rep(4,84));
 #0h,24h,48h,72h
-scent.o_SR <- DoSCENT(data$exp,sr.v=SR.v,pheno.v);
 scent.o_NCG <- DoSCENTalt(data$exp,sr.v=NCG,pheno.v);
 
 ##AUC evaluation
