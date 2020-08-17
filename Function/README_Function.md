@@ -1,4 +1,4 @@
-This is a description of functions in NCG program. It needs to be emphasized that CompMaxSR, CompNS, CompS, CompSRana, DoIntegPPI and DoSCENT are from github: https://github.com/aet21/SCENT. Signaling entropy in SCENT program is replaced by NCG. Here are the details:
+This is a description of functions in NCG program. It needs to be emphasized that "DoIntegPPI" and "DoSCENT" are from github: https://github.com/aet21/SCENT and "DoSCENTalt" is an altered version of "DoSCENT". Signaling entropy in SCENT program is replaced by NCG. Here are the details:
 
 
 
@@ -6,29 +6,7 @@ CompECC: For an adjacency matrix of protein-protein interaction network, compute
 
 
 
-CompMaxSR: For a given maximally connected unweighted network, specified by an adjacency matrix, there is a maximum possible signaling entropy rate, which this function computes.
-
-
-
-CompNC: This function finds the common genes between the scRNA-Seq data matrix, ECC matrix and gene-to-gene functional similarity matrix, and computes the NC value for each cell.
-
-
-
 CompNCG: This function finds the common genes between the scRNA-Seq data matrix, ECC matrix and gene-to-gene functional similarity matrix, and computes the NCG value for each cell.
-
-
-
-CompNS: Computes the normalized local signaling entropy for a gene. This is an internal function which the user does not need to invoke.
-
-
-
-CompS: Computes the local signaling entropy for a gene. This is an internal function which the user does not need to invoke.
-
-
-
-CompSRana: This is the main user function for computing signaling entropy of single cells. It takes as input the gene expression profile of a single cell
-and the adjacency matrix of a connected network. These inputs will be
-typically the output of the \code{DoIntegPPI} function.
 
 
 
