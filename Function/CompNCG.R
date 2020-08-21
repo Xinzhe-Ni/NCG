@@ -13,7 +13,7 @@ CompNCG<-
     expint <- exp[map3.idx,];
     
     EG <- ECCint*kmint;
-    NC <- vector();
+    ECG <- vector();
     for(i in 1:ncol(EG)){
       ECG[i] <- sum(EG[i,]);
     }
