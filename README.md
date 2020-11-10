@@ -1,5 +1,5 @@
 # NCG
-NCG is a single-cell potency model to predict single-cell differentiation and discriminate pluripotent and non-pluripotent cells.
+NCG is a single-cell potency model to predict single-cell differentiation and discriminate pluripotent and non-pluripotent cells under R version 3.6.0.
 
 NCG was proposed by following steps: 
 
@@ -10,3 +10,4 @@ NCG was proposed by following steps:
 > (3) Assignment of gene-to-gene functional similarities as weights to ECC, 
 
 > (4) Combination of weighted ECC with scRNA-Seq data.
+
