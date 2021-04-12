@@ -1,3 +1,5 @@
+##Teschendorff A E, Enver T. Single-cell entropy for accurate estimation of differentiation potency from a cell’s transcriptome[J]. Nature communications, 2017, 8(1): 1-15.
+
 DoIntegPPI <-
 function(exp.m,ppiA.m){
     
