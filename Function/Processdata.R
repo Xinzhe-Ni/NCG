@@ -1,3 +1,22 @@
+##############################################################################
+##
+##  description: Processes all datasets except Yao1 including quantile normalization, log2-transformation and other steps, and performs a gene ID conversion on PPI network.
+
+##  usage: Processdata(counts, PPI)
+
+##  arguments: 
+
+##  counts: The scRNA-seq data matrix with rows labeling genes and columns labeling single cells.
+##  PPI: The adjacency matrix of a user-given PPI network with rownames and colnames labeling a gene ID.
+
+##  value:
+
+##  exp: The scRNA-seq data matrix after preprocessing.
+##  adj: The adjacency matrix of PPI network after gene ID conversion.
+##
+##############################################################################
+
+
 Processdata<-
   function(counts,PPI){
     

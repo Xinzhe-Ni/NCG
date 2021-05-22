@@ -1,3 +1,19 @@
+##############################################################################
+##
+##  description: For an adjacency matrix of protein-protein interaction network, computes the Edge Clustering Coefficient matrix, whose size is the same as PPI network matrix.
+
+##  usage: CompECC(PPI)
+
+##  arguments: 
+
+##  PPI: The adjacency matrix of a user-given PPI network with rownames and colnames labeling a gene ID.
+
+##  value:
+
+##  ECC:  The Edge Clustering Coefficient matrix computed by PPI network.
+##
+##############################################################################
+
 CompECC <-
   function(PPI){
     
