@@ -1,5 +1,23 @@
 ##Teschendorff A E, Enver T. Single-cell entropy for accurate estimation of differentiation potency from a cell’s transcriptome[J]. Nature communications, 2017, 8(1): 1-15.
 
+##############################################################################
+##
+##  description: This function finds the common genes between the scRNA-Seq data matrix and the genes present in the PPI network, and constructs the maximally connected subnetwork and reduced expression matrix for the computation of signaling entropy.
+
+##  usage: DoIntegPPI(exp.m, ppiA.m)
+
+##  arguments: 
+
+##  exp.m: The scRNA-Seq data matrix with rows labeling genes and columns labeling single cells.
+##  ppiA.m: The adjacency matrix of a user-given PPI network with rownames and colnames labeling a gene ID.
+
+##  value:
+
+##  expMC: Reduced expression matrix with genes in the maximally connected subnetwork.
+##  adjMC: Adjacency matrix of the maximally connected subnetwork.
+##
+##############################################################################
+
 DoIntegPPI <-
 function(exp.m,ppiA.m){
     
