@@ -126,18 +126,33 @@ pcorTH: Threshold for calling significant partial correlations. Default value is
 **value**:
 
 potS: Inferred discrete potency states for each single cell. It is indexed so that the index increases as the NCG of the state decreases.
+
 distPSPH: Table giving the distribution of single-cells across potency states and phenotypes.
+
 prob: Table giving the probabilities of each potency state per phenotype value.
+
 hetPS: The normalised NCG of potency per phenotype value.
+
 cl: The co-expression clustering index for each single cell.
+
 pscl: The potency coexpression clustering label for each single cell.
+
 distPSCL: The distribution of single cell numbers per potency state and coexpression cluster.
+
 medLM: A matrix of medoids of gene expression for the selected landmarks.
+
 srPSCL: The average NCG of single cells in each potency coexpression cluster.
+
 srLM: The average NCG of single cells in each landmark.
+
 distPHLM: Table giving the distribution of single cell numbers per phenotype and landmark.
+
 cellLM: Nearest landmark for each single cell.
+
 cellLM2: A vector specifying the nearest and next-nearest landmark for each single cell.
+
 adj: Weighted adjacency matrix between landmarks with entries giving the number of single cells mapping closest to the two landmarks.
+
 pcorLM: Partial correlation matrix of landmarks as estimated from the expression medoids.
+
 netLM: Adjacency matrix of landmarks specifying which partial correlations are significant.
