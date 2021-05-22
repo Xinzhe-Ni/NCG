@@ -10,7 +10,7 @@
 
 ##  value:
 
-##  ECC:  The Edge Clustering Coefficient matrix computed by PPI network.
+##  ECC: The Edge Clustering Coefficient matrix computed by PPI network.
 ##
 ##############################################################################
 
