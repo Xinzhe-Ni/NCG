@@ -1,3 +1,21 @@
+##############################################################################
+##
+##  description: This function finds the common genes between the scRNA-Seq data matrix, ECC matrix and gene-to-gene functional similarity matrix, and computes the NCG value for each cell.
+
+##  usage: CompNCG(ECC, exp, km)
+
+##  arguments: 
+
+##  ECC: The output value of function CompECC.
+##  exp: The output value of function Processdata.
+##  km: The pre-compiled pairwise Kappa similarity matrix on Gene Ontology of human genes.
+
+##  value:
+
+##  NCG_nor: The normalized single-cell potency measure computing by Edge Clustering Coefficient, scRNA-seq and Gene Ontology similarity scores.
+##
+##############################################################################
+
 CompNCG<-
   function(ECC,exp,km){
     
