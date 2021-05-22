@@ -1,5 +1,11 @@
 ##Teschendorff A E, Enver T. Single-cell entropy for accurate estimation of differentiation potency from a cell’s transcriptome[J]. Nature communications, 2017, 8(1): 1-15.
 
+##############################################################################
+##
+##  description: Main user function implement SCENT. This function infers the discrete potency states of single cells, its distribution across the single cell population, identifies potency-coexpression clusters of single cells, called landmarks, and finally infers the dependencies of these landmarks which can aid in recontructing lineage trajectories in time course scRNA-Seq experiments.
+##
+##############################################################################
+
 DoSCENT <-
 function(exp.m,sr.v,pheno.v=NULL,mixmod=NULL,maxPS=5,pctG=0.01,kmax=9,pctLM=0.05,pcorTH=0.1){
 
