@@ -155,8 +155,5 @@ adj: Weighted adjacency matrix between landmarks with entries giving the number 
 
 pcorLM: Partial correlation matrix of landmarks as estimated from the expression medoids.
 
-<<<<<<< HEAD
 netLM: Adjacency matrix of landmarks specifying which partial correlations are significant.
-=======
-netLM: Adjacency matrix of landmarks specifying which partial correlations are significant.
->>>>>>> 952cc1d5a5bc1180d555430e1a7baf7c17709157
+
