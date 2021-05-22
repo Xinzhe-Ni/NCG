@@ -1,3 +1,42 @@
+##############################################################################
+##
+##  description: An altered version of DoSCENT. This function deletes the logarithmic step of signaling entropy to do a Gaussian fitting and keeps other steps unchanged.
+
+##  usage: DoSCENTalt(exp.m, NCG, pheno.v = NULL, mixmod = NULL, maxPS = 5, pctG = 0.01, kmax = 9, pctLM = 0.05, pcorTH = 0.1)
+
+##  arguments: 
+
+##  exp.m: Normalized single-cell RNA-Seq data matrix, with rows labeling genes and columns labeling single cells.
+##  NCG: The output value of function CompNCG.
+##  pheno.v: A phenotype vector for the single cells, of same length and order as the columns of exp.m.
+##  mixmod: Specifies whether the Gaussian mixture model to be fit assumes components to have different (default) or equal variance. In the latter case, use mixmod=c("E").
+##  maxPS: Maximum number of potency states to allow, when inferring discrete potency states of single cells. Default value is 5.
+##  pctG: Percentage of all genes in \code{exp.m} to select from each principal component in an SVD/PCA of \code{exp.m}. The union set of all selected genes is then used for clustering. Default value is 0.01.
+##  kmax: Maximum number of co-expression clusters to allow when performing clustering. Default value is 9. Larger values are not allowed.
+##  pctLM: Percentage of total number of single cells to allow as a minimum size for selecting interesting landmarks i.e. potency-coexpression clusters of single cells. Default value is 0.05.
+##  pcorTH: Threshold for calling significant partial correlations. Default value is 0.1. Usually, single-cell experiments profile large number of cells, so 0.1 is a sensible threshold.
+
+##  value:
+
+##  potS: Inferred discrete potency states for each single cell. It is indexed so that the index increases as the NCG of the state decreases.
+##  distPSPH: Table giving the distribution of single-cells across potency states and phenotypes.
+##  prob: Table giving the probabilities of each potency state per phenotype value.
+##  hetPS: The normalised NCG of potency per phenotype value.
+##  cl: The co-expression clustering index for each single cell.
+##  pscl: The potency coexpression clustering label for each single cell.
+##  distPSCL: The distribution of single cell numbers per potency state and coexpression cluster.
+##  medLM: A matrix of medoids of gene expression for the selected landmarks.
+##  srPSCL: The average NCG of single cells in each potency coexpression cluster.
+##  srLM: The average NCG of single cells in each landmark.
+##  distPHLM: Table giving the distribution of single cell numbers per phenotype and landmark.
+##  cellLM: Nearest landmark for each single cell.
+##  cellLM2: A vector specifying the nearest and next-nearest landmark for each single cell.
+##  adj: Weighted adjacency matrix between landmarks with entries giving the number of single cells mapping closest to the two landmarks.
+##  pcorLM: Partial correlation matrix of landmarks as estimated from the expression medoids.
+##  netLM: Adjacency matrix of landmarks specifying which partial correlations are significant.
+##
+##############################################################################
+
 DoSCENT <-
   function(exp.m,sr.v,pheno.v=NULL,mixmod=NULL,maxPS=5,pctG=0.01,kmax=9,pctLM=0.05,pcorTH=0.1){
     
