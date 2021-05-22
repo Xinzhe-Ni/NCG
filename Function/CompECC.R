@@ -6,8 +6,7 @@
 
 ##  arguments: 
 
-##  PPI: The adjacency matrix of a user-given PPI network with rownames and
-##  colnames labeling a gene ID.
+##  PPI: The adjacency matrix of a user-given PPI network with rownames and colnames labeling a gene ID.
 
 ##  value:
 
